@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "410569715478",
+    "project_id": "myapp-3bf81",
+    "storage_bucket": "myapp-3bf81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410569715478:android:df88cdcb9cc95066892a37",
+        "android_client_info": {
+          "package_name": "com.ImadSelka.coffee_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAddwHvnJ0ez1RhSUGzFWcqGdrrD7PGkXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410569715478:android:07d2f7fff90de0a5892a37",
+        "android_client_info": {
+          "package_name": "com.example.brew_crew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAddwHvnJ0ez1RhSUGzFWcqGdrrD7PGkXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410569715478:android:47ecd79ae2943cbb892a37",
+        "android_client_info": {
+          "package_name": "com.example.my_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAddwHvnJ0ez1RhSUGzFWcqGdrrD7PGkXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
