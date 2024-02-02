@@ -1,3 +1,4 @@
+import 'package:brew_crew/models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthService {
@@ -16,13 +17,18 @@ class AuthService {
   // currentUser() which is a method to retrieve the currently logged in user,
   // was replaced with the property currentUser and it no longer returns a Future<FirebaseUser>
 
+  //create user obj base on FirebaseUser
+
+  UserObj? _userFromFirebaseUser(User user) {
+    return user != null ? UserObj(uid: user.uid) : null;
+  }
   //sign in anonymous user
 
   Future signInAnon() async {
     try {
       UserCredential result = await _auth.signInAnonymously();
       User? user = result.user;
-      return user;
+      return _userFromFirebaseUser(user!);
     } catch (e) {
       print(e.toString());
       return null;
