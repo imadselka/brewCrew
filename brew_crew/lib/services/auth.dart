@@ -5,6 +5,7 @@ class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   // Latest version :
+
   // 'FirebaseUser' with 'User'
   // '_auth.onAuthStateChanged' with '_auth.authStateChanges()'
   // 'Firestore' with 'FirebaseFirestore'
@@ -22,6 +23,14 @@ class AuthService {
   UserObj? _userFromFirebaseUser(User user) {
     return user != null ? UserObj(uid: user.uid) : null;
   }
+
+  // auth change user stream
+
+  Stream<UserObj?> get user {
+    return _auth.authStateChanges().map<UserObj?>(
+        (User? user) => user != null ? _userFromFirebaseUser(user) : null);
+  }
+
   //sign in anonymous user
 
   Future signInAnon() async {
@@ -39,4 +48,12 @@ class AuthService {
   //register with email and password
 
   // sign out
+  Future signOut() async {
+    try {
+      return await _auth.signOut();
+    } catch (e) {
+      print(e.toString());
+      return null;
+    }
+  }
 }
